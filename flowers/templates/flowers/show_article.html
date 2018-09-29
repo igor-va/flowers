@@ -1,0 +1,20 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+<div class="entry">
+<h2>{{article.name}}</h2>
+<p>{{article.date_created}}</p>
+
+<br>
+
+<img src="{{article.image.url}}" class="img-responsive" />
+
+<hr />
+
+<p>{{article.short_desc|safe}}</p>
+<p>{{article.long_desc|safe}}</p>
+
+</div>
+
+{% endblock %}

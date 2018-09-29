@@ -1,0 +1,8 @@
+*.sqlite3
+*~
+website/prod.py
+*pycache*
+media/
+node_modules
+collectedstatic
+venv

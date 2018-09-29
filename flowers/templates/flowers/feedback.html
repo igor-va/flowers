@@ -1,0 +1,19 @@
+{% extends "two_columns.html" %}
+
+{% block title %}
+Отзывы &mdash; Зелёные
+{% endblock %}
+
+{% block main %}
+
+Пришлите свой отзыв на <a href="admin@admin.com">admin@admin.com</a>
+
+<hr />
+
+{% for review in reviews %}
+<h2>{{review.name}}</h2>
+<p>{{review.date_created}}</p>
+<p>{{review.review}}</p>
+{% endfor %}
+
+{% endblock %}

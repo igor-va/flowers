@@ -1,0 +1,17 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+<div class="entry">
+<h2>{{flower.name}}</h2>
+
+<img src="{{flower.image.url}}" class="img-responsive" />
+
+<hr />
+
+<p>{{flower.short_desc|safe}}</p>
+<p>{{flower.long_desc|safe}}</p>
+
+</div>
+
+{% endblock %}

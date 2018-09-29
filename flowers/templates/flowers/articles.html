@@ -1,0 +1,26 @@
+{% extends "two_columns.html" %}
+
+{% block main %}
+
+{% for article in articles %}
+{% if article.short_desc and article.image %}
+
+{% if article.image %}
+    <a href="{% url 'show_article' article.nick %}">
+        <img src="{{article.image.url}}" width="250" class="alignleft"/>
+    </a>
+{% endif %}
+
+
+<a href="{% url 'show_article' article.nick %}">
+    <h2>{{article.name}}</h2>
+</a>
+
+<p>{{article.short_desc|safe}}</p>
+<p>{{article.date_created}}</p>
+
+<div style="clear:both;"></div>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "two_columns.html" %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block main %}
+
+{% for about in about_all %}
+    <p>{{about.desc}}</p>
+{% endfor %}
+
+{% endblock %}
